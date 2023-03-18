@@ -1,0 +1,4059 @@
+<html>
+	<head>
+		<title>Selenium Test Report</title>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+      		google.load('visualization', '1', {packages: ['corechart']});
+    		</script>
+    		<script type="text/javascript">
+      	
+		function drawVisualization() {
+        	// Create and populate the data table.
+        	var data = google.visualization.arrayToDataTable([
+          	['Test', 'Count'],
+          	['Passed', 14],
+          	['Failed', 0],
+          	['Not run', 0]
+        	]);
+      
+		var options = {
+  		width: 400,
+  		height: 250,
+  		colors: ['#4AA02C', '#F62817', '#FDD017']
+		};
+        	// Create and draw the visualization.
+        	new google.visualization.PieChart(document.getElementById('visualization')).
+            	draw(data, options);
+      		}
+      
+
+      		google.setOnLoadCallback(drawVisualization);
+			
+function toggle_visibility(tbid,lnkid)
+{
+  if(document.all){
+	document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "block" ? "none" : "block";}
+  else{document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "table" ? "none" : "table";}
+  document.getElementById(lnkid).value = document.getElementById(lnkid).value == "[-] Collapse" ? "[+] Expand" : "[-] Collapse";
+ }
+    		</script>
+			<style type="text/css">
+#tbls,#tbld,#tblf ,#tbl1,#tbl2,#tbl3,#tbl4,#tbl5,#tbl6,#tbl7,#tbl8,#tbl9,#tbl10,#tbl11,#tbl12,#tbl13,#tbl14,#tbl15,#tbl16,#tbl17,#tbl18,#tbl19,#tbl20,#tbl21,#tbl22,#tbl23,#tbl24,#tbl25,#tbl26,#tbl27,#tbl28,#tbl29,#tbl30,#tbl31,#tbl32 {display:none;}
+#lnks,#lnkd,#lnkf ,#lnk1,#lnk2,#lnk3,#lnk4,#lnk5,#lnk6,#lnk7,#lnk8,#lnk9,#lnk10,#lnk11,#lnk12,#lnk13,#lnk14,#lnk15,#lnk16,#lnk17,#lnk18,#lnk19,#lnk20,#lnk21,#lnk22,#lnk23,#lnk24,#lnk25,#lnk26,#lnk27,#lnk28,#lnk29,#lnk30,#lnk31,#lnk32 {border:none;background:none;width:85px;}
+td {FONT-SIZE: 75%; MARGIN: 0px; COLOR: #000000;}
+td {FONT-FAMILY: verdana,helvetica,arial,sans-serif}
+a {TEXT-DECORATION: none;}
+</style>
+	</head>
+	<body>
+		<table align="center" border="1" cellpadding="1" cellspacing="1" dir="ltr" style="height: 108px; width: 100%;">
+			<tbody>
+				<tr>
+					<th style="text-align: bottom; border-color: rgb(0, 0, 0); background-color: rgb(0, 94, 138);">
+						<img style="padding:15px;" align="left" width="80" height="65" src="http://upload.wikimedia.org/wikipedia/en/f/f8/Persistent_logo.png" alt="File:Persistent logo.png">
+						<span style="font-size: 40px; padding-bottom:500px; padding-right:120px; color: rgb(255, 255, 255);">Automation Test Report</span></th>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Project </strong></span></td>
+					<td style="width: 20%; text-align: center;"> LGIBM </td>
+					<td rowspan="6" style="width: 20%; text-align: center;">
+						<div id="visualization" style="width: 100%; height: 100%; text-align: center;"></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Executed By</strong></span></td>
+					<td style="width: 20%; text-align: center;"> LGIBM </td>
+				</tr>
+				<tr>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Build</strong></span></td>
+					<td style="width: 20%; text-align: center;"> Build#1.0 </td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Suite Pass Rate</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 100% </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Release</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 1 </td>
+					
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Passed</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 14 </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Platform</strong></span></td>
+					<td style="width: 20%; text-align: center;"> Firefox </td>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Failed</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 0 </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Start Time</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 13 Dec 2017, 03:58:45 </td>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Invalid</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 0 </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>End Time</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 13 Dec 2017, 04:05:05 </td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Total Test Cases</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 14 </td>
+				</tr>
+
+			</tbody>
+		</table>
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 35%; text-align: center;background-color:#98AFC7;">
+						<strong>Test Case Name</strong></td>
+					<td style="width: 20%; text-align: center;background-color:#98AFC7;">
+						<strong>Start Time</strong></td>
+					<td style="width: 20%; text-align: center;background-color:#98AFC7;">
+						<strong>End Time</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>Status</strong></td>
+					<td style="width: 15%; text-align: center;background-color:#98AFC7;">
+						<strong></strong></td>
+				</tr>
+			</tbody>
+		</table>
+
+			</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TellmetheTime - To   Verify   Timezone service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 03:58:45</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 03:59:13</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk19" type="button" value="[+] Expand" onclick="toggle_visibility('tbl19','lnk19');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl19">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+what is the time now</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+Current time in</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated Current time in against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TellmetheTime - To   Verify   Timezone service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 03:59:13</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 03:59:40</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk20" type="button" value="[+] Expand" onclick="toggle_visibility('tbl20','lnk20');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl20">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+tell me the time in japan</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+Current time in japan, Japan is</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated Current time in japan, Japan is against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TellmetheTime - To   Verify   Timezone service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 03:59:40</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:00:06</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk21" type="button" value="[+] Expand" onclick="toggle_visibility('tbl21','lnk21');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl21">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+what time is it now</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+Current time in</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated Current time in against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TellmetheTime - To   Verify   Timezone service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:00:06</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:00:33</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk22" type="button" value="[+] Expand" onclick="toggle_visibility('tbl22','lnk22');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl22">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+tell me the time in US</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+Current time in us, United States is</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated Current time in us, United States is against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TellmetheTime - To   Verify   Timezone service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:00:33</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:00</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk23" type="button" value="[+] Expand" onclick="toggle_visibility('tbl23','lnk23');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl23">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+Tell me the time in Australia</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+Current time in australia, Australia is</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated Current time in australia, Australia is against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TellmetheTime - To   Verify   Timezone service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:00</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:24</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk24" type="button" value="[+] Expand" onclick="toggle_visibility('tbl24','lnk24');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl24">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+pls. tell me time</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+Sorry, I'm not following you</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated Sorry, I'm not following you against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:24</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:56</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk25" type="button" value="[+] Expand" onclick="toggle_visibility('tbl25','lnk25');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl25">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+set the alarm at 9:00AM</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+in the morning or afternoon</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated in the morning or afternoon against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS010</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS011</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+morning</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS012</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS013</td>
+
+<td>
+Click on Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS014</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS015</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+I will wake you up at 9:00 AM</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated I will wake you up at 9:00 AM against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS016</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:56</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:57</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk26" type="button" value="[+] Expand" onclick="toggle_visibility('tbl26','lnk26');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl26">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr></table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:01:57</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:02:28</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk27" type="button" value="[+] Expand" onclick="toggle_visibility('tbl27','lnk27');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl27">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+set the alarm for midnight</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+in the morning or afternoon</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated in the morning or afternoon against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS010</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS011</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+morning</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS012</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS013</td>
+
+<td>
+Click on Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS014</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS015</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+I will wake you up at 12:00 AM</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated I will wake you up at 12:00 AM against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS016</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:02:28</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:03:02</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk28" type="button" value="[+] Expand" onclick="toggle_visibility('tbl28','lnk28');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl28">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+set the alarm for midnight</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+in the morning or afternoon</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated in the morning or afternoon against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS010</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS011</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+afternoon</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS012</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS013</td>
+
+<td>
+Click on Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS014</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+2</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 2 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS015</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+I will wake you up at 12:00 PM</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated I will wake you up at 12:00 PM against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS016</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram1 - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:03:02</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:03:32</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk29" type="button" value="[+] Expand" onclick="toggle_visibility('tbl29','lnk29');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl29">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+10</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 10 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+set the alarm at 3:00PM</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+I will wake you up at 3:00 PM</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated I will wake you up at 3:00 PM against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram1 - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:03:32</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:04:02</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk30" type="button" value="[+] Expand" onclick="toggle_visibility('tbl30','lnk30');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl30">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+10</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 10 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+Set the alarm</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+what time would you like to wake up?</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated what time would you like to wake up? against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram1 - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:04:02</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:04:34</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk31" type="button" value="[+] Expand" onclick="toggle_visibility('tbl31','lnk31');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl31">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+10</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 10 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+set the alarm for now</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+I will wake you up at</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated I will wake you up at against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+</table><table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 35%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>Alaram1 - Verify the Alaram Service</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:04:34</strong> 
+</td>
+<td colspan="1" style="width: 20%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+13 Dec 2017, 04:05:05</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center; color: rgb(34,177,76);background-color: rgb(210, 205, 205);"><strong>PASS</strong></td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk32" type="button" value="[+] Expand" onclick="toggle_visibility('tbl32','lnk32');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl32">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Step Id</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Step Description</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Keyword</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Test Parameter</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Link Id</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Status</strong></td>
+<td style="width: 15%; text-align: center;background-color:#98AFC7;"><strong>Comments</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">
+TS001</td>
+
+<td>
+Launch browser and access the ERT web site</td>
+
+<td style="text-align: center;">
+LAUNCH</td>
+
+<td style="text-align: center;">
+URL</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS002</td>
+
+<td>
+wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+10</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 10 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS003</td>
+
+<td>
+Click on  Entermessage field</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS004</td>
+
+<td>
+Enter message</td>
+
+<td style="text-align: center;">
+INPUT_TEXT</td>
+
+<td style="text-align: center;">
+set the alarm for now</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS005</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS006</td>
+
+<td>
+Click on  Send</td>
+
+<td style="text-align: center;">
+CLICK</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS007</td>
+
+<td>
+Wait</td>
+
+<td style="text-align: center;">
+WAIT_SECONDS</td>
+
+<td style="text-align: center;">
+5</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+Waited for 5 seconds</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS008</td>
+
+<td>
+Validate  Response</td>
+
+<td style="text-align: center;">
+LGE_VALIDATE_RESPONSE</td>
+
+<td style="text-align: center;">
+I will wake you up at</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+validated I will wake you up at against actual result</td>
+
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TS009</td>
+
+<td>
+Refresh</td>
+
+<td style="text-align: center;">
+BROWSER_REFRESH</td>
+
+<td style="text-align: center;">
+-</td>
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong></strong>
+</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+<strong>Pass</strong>
+</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+</table>
+
+</tr>
+</table>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="1" style="text-align: center;background-color: rgb(210, 205, 205);"><strong>Tests Not Run</strong>
+</td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnks" type="button" value="[+] Expand" onclick="toggle_visibility('tbls','lnks');"></td>
+</tr>
+<tr colspan="1"><table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbls">
+<tr>
+<td colspan="2" style="text-align: left;background-color: #FFFFFF;">
+Change Channel - To Verify  Change Channel
+</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;background-color: #FFFFFF;">
+HotelShuttle - To   Verify HotelShuttleService
+</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;background-color: #FFFFFF;">
+ResturantNearBY - To Verify Resturant Near By Service
+</td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: left;background-color: #FFFFFF;">
+TellmeAbout - To   Verify   Tell me About Service
+</td>
+</tr>
+</table>
+</tr>
+</table>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="1" style="text-align: center;background-color: rgb(210, 205, 205);"><strong>Tests Not Applicable</strong>
+</td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnkd" type="button" value="[+] Expand" onclick="toggle_visibility('tbld','lnkd');"></td>
+</tr>
+<tr colspan="1"><table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbld">
+</table>
+</tr>
+</table>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="1" style="text-align: center;background-color: rgb(210, 205, 205);"><strong>Blocked Tests</strong>
+</td>
+<td colspan="1" style="width: 15%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnkf" type="button" value="[+] Expand" onclick="toggle_visibility('tblf','lnkf');"></td>
+</tr>
+<tr colspan="1"><table width="100%" border="1" cellpadding="4" cellspacing="0" id="tblf"></table>
+	</tr>
+		</table>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%; height: 50px;">
+			<tbody>
+				<tr>
+					<td style="background-color: rgb(0, 94, 138);">
+						<p style="text-align: center; color: rgb(255, 255, 255);">
+							<em>*** Generated by Selenium automation framework - © 2014 Location Products - Persistent Systems Ltd. ***</em> </p>
+					</td>
+				</tr>
+			</tbody>
+</tbody>
+		</table>
+		
+</html></body>

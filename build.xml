@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="GUI_Automation">
+              	
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../D/NewDrive(E)/eclipse-jee-kepler-R-win32/eclipse"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="GUI_Automation.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="libs/Selenium_jar_files/guice-3.0.jar"/>
+        <pathelement location="libs/Selenium_jar_files/jxl-2.6.jar"/>
+        <pathelement location="libs/Selenium_jar_files/mail.jar"/>
+        <pathelement location="libs/Selenium_jar_files/poi-3.14-20160307.jar"/>
+        <pathelement location="libs/Selenium_jar_files/velocity-1.5.jar"/>
+        <pathelement location="libs/Selenium_jar_files/velocity-dep-1.4.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/commons-logging-1.1.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/junit.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/ws-commons-util-1.0.2.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/xmlrpc-client-3.1-sources.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/xmlrpc-client-3.1.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/xmlrpc-common-3.1-sources.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/lib/xmlrpc-common-3.1.jar"/>
+        <pathelement location="libs/testlink-api-client-2.0/testlink-api-client-20091130/testlink-api-client-1.0.jar"/>
+        <pathelement location="libs/Selenium_jar_files/log4j-1.2.17.jar"/>
+        <pathelement location="libs/Selenium_jar_files/mysql-connector-java-5.1.10.jar"/>
+        <pathelement location="libs/Selenium_jar_files/ojdbc6_g.jar"/>
+        <pathelement location="libs/Selenium_jar_files/ojdbc6.jar"/>
+        <pathelement location="libs/Selenium_jar_files/spring-context-3.2.4.RELEASE.jar"/>
+        <pathelement location="libs/Selenium_jar_files/selendroid-client-0.10.0.jar"/>
+        <pathelement location="libs/Selenium_jar_files/selendroid-standalone-0.10.0-with-dependencies.jar"/>
+        <pathelement location="libs/smpp.jar"/>
+        <pathelement location="libs/java-client-2.2.0-javadoc.jar"/>
+        <pathelement location="libs/java-client-2.2.0-sources.jar"/>
+        <pathelement location="libs/java-client-2.2.0.jar"/>
+        <pathelement location="libs/Selenium_jar_files/gson-2.3.1.jar"/>
+        <pathelement location="libs/selenium-server-standalone-2.53.1.jar"/>
+        
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" compiler="javac1.7" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="GUI_Automation.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="AndroidContactsTest (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="AndroidContactsTest" todir="${junit.output.dir}"/>
+            <classpath refid="GUI_Automation.classpath"/>
+        </junit>
+    </target>
+    <target name="AutomateMe">
+        <java classname="AutomateMe" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="dateCalculator">
+        <java classname="dateCalculator" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="GUI_Automation">
+        <java classname="TestSuitRunner" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="RunnerUI (1)">
+        <java classname="RunnerUI" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="sampleAppiumTest (1)">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="sampleAppiumTest" todir="${junit.output.dir}"/>
+            <classpath refid="GUI_Automation.classpath"/>
+        </junit>
+    </target>
+    <target name="sampleAppiumTest (2)">
+        <java classname="sampleAppiumTest" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="SendMailSSL">
+        <java classname="SendMailSSL" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="SendMailTLS">
+        <java classname="SendMailTLS" failonerror="true" fork="yes">
+            <classpath refid="GUI_Automation.classpath"/>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>

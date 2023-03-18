@@ -1,0 +1,172 @@
+<html>
+	<head>
+		<title>Selenium Test Report</title>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+      		google.load('visualization', '1', {packages: ['corechart']});
+			</script>
+    		<script type="text/javascript">
+      	
+		function drawVisualization() {
+        	// Create and populate the data table.
+        	var data = google.visualization.arrayToDataTable([
+          	['Test', 'Count'],
+          	['Passed', 1],
+          	['Failed', 0],
+          	['Not run', 0]
+        	]);
+         
+	  
+		var options = {
+  		width: 400,
+  		height: 250,
+		is3D: true,
+  		colors: ['#4AA02C', '#F62817', '#FDD017']
+		};
+		
+        	// Create and draw the visualization.
+        	new google.visualization.PieChart(document.getElementById('visualization')).
+            	draw(data, options);
+			}
+      
+
+      		google.setOnLoadCallback(drawVisualization);
+			
+function toggle_visibility(tbid,lnkid)
+{
+  if(document.all){
+	document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "block" ? "none" : "block";}
+  else{document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "table" ? "none" : "table";}
+  document.getElementById(lnkid).value = document.getElementById(lnkid).value == "[-] Collapse" ? "[+] Expand" : "[-] Collapse";
+ }
+    		</script>
+			<style type="text/css">
+#tbls,#tbld,#tblf tableids {display:none;}
+#lnks,#lnkd,#lnkf linkids {border:none;background:none;width:85px;}
+td {FONT-SIZE: 75%; MARGIN: 0px; COLOR: #000000;}
+td {FONT-FAMILY: verdana,helvetica,arial,sans-serif}
+a {TEXT-DECORATION: none;}
+</style>
+	</head>
+	<body>
+		<table align="center" border="1" cellpadding="1" cellspacing="1" dir="ltr" style="height: 108px; width: 100%;">
+			<tbody>
+				<tr>
+					<th style="text-align: bottom; border-color: rgb(0, 0, 0); background-color: rgb(0, 94, 138);">
+						<img style="padding:15px;" align="left" width="80" height="65" src="http://upload.wikimedia.org/wikipedia/en/f/f8/Persistent_logo.png" alt="File:Persistent logo.png">
+						<span style="font-size: 40px; padding-bottom:500px; padding-right:120px; color: rgb(255, 255, 255);">Automation Test Suite Report</span></th>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Project </strong></span></td>
+					<td style="width: 20%; text-align: center;"> LGIBM </td>
+					<td rowspan="6" style="width: 20%; text-align: center;">
+						<div id="visualization" style="width: 100%; height: 100%; text-align: center;"></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Executed By</strong></span></td>
+					<td style="width: 20%; text-align: center;"> LGIBM </td>
+				</tr>
+				<tr>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Build</strong></span></td>
+					<td style="width: 20%; text-align: center;"> Build#1.0 </td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Suite Pass Rate</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 100% </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Release</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 1 </td>
+					
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Passed</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 1 </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Platform</strong></span></td>
+					<td style="width: 20%; text-align: center;"> Firefox </td>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Failed</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 0 </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Start Time</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 28 Dec 2017, 11:21:10 </td>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Invalid</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 0 </td>
+				</tr>
+				<tr>
+					<td style="text-align: center; width: 10%;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>End Time</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 28 Dec 2017, 11:21:10 </td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<span style="color: rgb(0, 0, 0);"><strong>Total Test Cases</strong></span></td>
+					<td style="width: 20%; text-align: center;"> 1 </td>
+				</tr>
+
+			</tbody>
+			<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 25%; text-align: center;background-color:#98AFC7;">
+						<strong>Test Suite Name</strong></td>
+					<td style="width: 25%; text-align: center;background-color:#98AFC7;">
+						<strong>Test Suite Desc</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>Total TC</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>Passed TC</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>Failed TC</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>Not Run TC</strong></td>	
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>Pass Percentage</strong></td>
+					</tr>
+			</tbody>
+		</table>
+			</table>
+		
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;"><tr><td style="text-align: center;width: 25%;"><a href = "D:\Snkalp\Automation\Automation\Results\28_Dec_2017_11_20\TestCases_DinnerInmyRoom_xls_IBMLG_Nightly_28_Dec_2017_11_20.html">
+TestCases_DinnerInmyRoom</a></td>
+
+<td style="text-align: center;width: 25%;">
+I want to get a dinner in my room</td>
+
+<td style="text-align: center;width: 10%;">1</td>
+
+<td style="text-align: center;width: 10%;">1</td>
+
+<td style="text-align: center;width: 10%;">0</td>
+
+<td style="text-align: center;width: 10%;">0</td>
+
+<td style="text-align: center;width: 10%;">100</td></tr></table>
+
+</tr>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;"><tr><td style="width: 100%; text-align: center;background-color:#98AFC7;"></tr></table></table>
+	</tr>
+		</table>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%; height: 50px;">
+			<tbody>
+				<tr>
+					<td style="background-color: rgb(0, 94, 138);">
+						<p style="text-align: center; color: rgb(255, 255, 255);">
+							<em>*** Generated by Selenium automation framework - © 2014 Location Products - Persistent Systems Ltd. ***</em> </p>
+					</td>
+				</tr>
+			</tbody>
+</tbody>
+		</table>
+		
+</html></body>

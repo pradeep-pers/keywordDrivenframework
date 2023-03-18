@@ -1,0 +1,1000 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Test Sheet', 'Total', 'Pass', 'Fail', 'Pass Percentage'],
+         ['TestCases_IBMLG1.xls',  0,      0,         0,             ],['TestCases_FlightScheduleDomestic.xls',  0,      0,         0,             ],['TestCases_FlightSchedule.xls',  0,      0,         0,             ],['TestCases_HotelShuttle.xls',  0,      0,         0,             ],['TestCases_HotelServices.xls',  0,      0,         0,             ],['TestCases_ResturantNearBy.xls',  0,      0,         0,             ],['TestCases_DontDistrub.xls',  0,      0,         0,             ],['TestCases_TellmeAbout.xls',  0,      0,         0,             ],['TestCases_WiFiInfo.xls',  0,      0,         0,             ],['TestCases_Checkout.xls',  0,      0,         0,             ],['TestCases_ChangeChannel.xls',  0,      0,         0,             ],['TestCases_ACTemaparature.xls',  0,      0,         0,             ],['TestCases_TellMetheTime.xls',  0,      0,         0,             ],['TestCases_Greetings.xls',  0,      0,         0,             ],['TestCases_Lights.xls',  0,      0,         0,             ],['Total',  0,      0,         0,             ]
+         //['End',  0,      0,        0,             0]
+         ]);
+
+    var options = {
+      title : 'Testlink Report by TestSuite',
+      vAxis: {title: 'Count'},
+      hAxis: {title: 'Suite'},
+      seriesType: 'bars',
+      series: {3: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+    </script>
+  </head>
+      <div id="chart_div" style="width: 900px; height: 500px;"></div>
+	 <table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 50%; text-align: center;background-color:#98AFC7;">
+						<strong>Test Suite Execution</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>0</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>0</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>0</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong></strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong></strong></td>	
+					</tr>
+			</tbody>
+		</table> 
+  </table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_IBMLG1-Verify   Blinds,Curtains</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk1" type="button" value="[+] Expand" onclick="toggle_visibility('tbl1','lnk1');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl1">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+Blinds - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Blinds - TestData :2</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Curtains - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Curtains - TestData :2</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_FlightScheduleDomestic-Let me know the flight schedule information - domestic</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk2" type="button" value="[+] Expand" onclick="toggle_visibility('tbl2','lnk2');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl2">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+FlightScheduleDomestic - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_FlightSchedule-Let me know the flight schedule information</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk3" type="button" value="[+] Expand" onclick="toggle_visibility('tbl3','lnk3');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl3">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+FlightSchedule - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_HotelShuttle-Let me know the hotel shuttle bus schedule</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk4" type="button" value="[+] Expand" onclick="toggle_visibility('tbl4','lnk4');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl4">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+HotelShuttle - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_HotelServices-Let me know what services are available at the hotel.</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk5" type="button" value="[+] Expand" onclick="toggle_visibility('tbl5','lnk5');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl5">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+HotelServices - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_ResturantNearBy-Is there any restaurants near here?</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk6" type="button" value="[+] Expand" onclick="toggle_visibility('tbl6','lnk6');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl6">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+ResturantNearBy - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_DontDistrub-Do not disturb me today</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk7" type="button" value="[+] Expand" onclick="toggle_visibility('tbl7','lnk7');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl7">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+DntDistrubToday - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_TellmeAbout-Please, tell me about</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk8" type="button" value="[+] Expand" onclick="toggle_visibility('tbl8','lnk8');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl8">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+TellmeAbout - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_WiFiInfo-What is the Wi-Fi Password?</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk9" type="button" value="[+] Expand" onclick="toggle_visibility('tbl9','lnk9');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl9">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+WifiINFO - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_Checkout-Check out please</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk10" type="button" value="[+] Expand" onclick="toggle_visibility('tbl10','lnk10');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl10">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+CheckOut - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_ChangeChannel-Change the channel to ESPN</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk11" type="button" value="[+] Expand" onclick="toggle_visibility('tbl11','lnk11');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl11">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+ChangeChanl - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_ACTemaparature-Set AC temaparture to Desired Temp</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk12" type="button" value="[+] Expand" onclick="toggle_visibility('tbl12','lnk12');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl12">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr></table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_TellMetheTime-Time zone</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk13" type="button" value="[+] Expand" onclick="toggle_visibility('tbl13','lnk13');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl13">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+TellmetheTime - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TellmetheTime - TestData :2</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TellmetheTime - TestData :3</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TellmetheTime - TestData :4</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TellmetheTime - TestData :5</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+TellmetheTime - TestData :6</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_Greetings-Verify Geetings Hello Watson</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk14" type="button" value="[+] Expand" onclick="toggle_visibility('tbl14','lnk14');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl14">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+Greetings - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Greetings - TestData :2</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Greetings - TestData :3</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Greetings - TestData :4</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+</table></tr>
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+<tr>
+<td colspan="2" style="width: 50%; text-align: center;background-color: rgb(210, 205, 205);">
+ <strong>TestCases_Lights-Verify Light is Truned on and Truned Off</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+0</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);">
+<strong>
+</strong> 
+</td>
+<td colspan="1" style="width: 10%; text-align: center;background-color: rgb(210, 205, 205);"><input id="lnk15" type="button" value="[+] Expand" onclick="toggle_visibility('tbl15','lnk15');"></td>
+</tr>
+<tr>
+
+<table width="100%" border="1" cellpadding="4" cellspacing="0" id="tbl15">
+<tr>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Test Case</strong></td>
+<td style="width: 25%; text-align: center;background-color:#98AFC7;"><strong>Total</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Pass</strong></td>
+<td style="width: 20%; text-align: center;background-color:#98AFC7;"><strong>Fail</strong></td>
+<td style="width: 10%; text-align: center;background-color:#98AFC7;"><strong>Pass Percentage</strong></td>
+
+</tr>
+<tr>
+<td style="text-align: center;">
+Lights - TestData :1</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>
+
+<tr>
+<td style="text-align: center;">
+Lights - TestData :2</td>
+
+<td style="text-align: center;">
+0</td>
+
+<td style="text-align: center; color: rgb(34,177,76) ">
+0</td>
+
+<td style="text-align: center; color: rgb(251,0,0) ">
+0</td>
+
+<td style="text-align: center;">
+-</td>
+</tr>

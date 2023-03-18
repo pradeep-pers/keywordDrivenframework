@@ -1,0 +1,547 @@
+18 Jul 2016 16:09:25,967 FATAL TestSuitRunner  []: Unable to launch the browser
+org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+webdriver-staging
+1468838321435	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1468838321437	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838321438	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1468838321438	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1468838321439	addons.xpi	DEBUG	checkForChanges
+1468838321440	addons.xpi	DEBUG	Loaded add-on state from prefs: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous7936990496658407476webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838298907,"mt":1468838298067}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838321442	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1468838321443	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838321446	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1468838321446	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous7936990496658407476webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838298907,"mt":1468838298067}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838321449	addons.xpi	DEBUG	No changes found
+1468838321463	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1468838321463	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1468838321464	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1468838321464	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1468838321464	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1468838321465	addons.manager	DEBUG	Starting provider: GMPProvider
+1468838321476	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1468838321476	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1468838321477	addons.manager	DEBUG	Starting provider: PluginProvider
+1468838321477	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1468838321477	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1468838321478	addons.manager	DEBUG	Completed startup sequence
+1468838321636	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\SHRUTI~1\AppData\Local\Temp\anonymous7936990496658407476webdriver-profile\extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1468838321854	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1468838321854	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1468838321855	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1468838322035	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1468838322035	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1468838322037	addons.xpi-utils	DEBUG	Successfully read XPI database
+1468838322146	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1468838322146	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1468838322146	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript warning: https://normandy.cdn.mozilla.net/static/js/bundles/selfrepair-7575f6d27445b45bcffb.js, line 9825: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'NGL04449', ip: '10.222.115.33', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_31'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:114)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:191)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:186)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:182)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:99)
+	at keywordLibrary.actions(keywordLibrary.java:1207)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:299)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+webdriver-staging
+1468838321435	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1468838321437	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838321438	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1468838321438	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1468838321439	addons.xpi	DEBUG	checkForChanges
+1468838321440	addons.xpi	DEBUG	Loaded add-on state from prefs: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous7936990496658407476webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838298907,"mt":1468838298067}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838321442	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1468838321443	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838321446	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1468838321446	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous7936990496658407476webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838298907,"mt":1468838298067}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838321449	addons.xpi	DEBUG	No changes found
+1468838321463	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1468838321463	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1468838321464	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1468838321464	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1468838321464	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1468838321465	addons.manager	DEBUG	Starting provider: GMPProvider
+1468838321476	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1468838321476	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1468838321477	addons.manager	DEBUG	Starting provider: PluginProvider
+1468838321477	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1468838321477	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1468838321478	addons.manager	DEBUG	Completed startup sequence
+1468838321636	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\SHRUTI~1\AppData\Local\Temp\anonymous7936990496658407476webdriver-profile\extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1468838321854	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1468838321854	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1468838321855	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1468838322035	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1468838322035	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1468838322037	addons.xpi-utils	DEBUG	Successfully read XPI database
+1468838322146	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1468838322146	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1468838322146	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript warning: https://normandy.cdn.mozilla.net/static/js/bundles/selfrepair-7575f6d27445b45bcffb.js, line 9825: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	... 10 more
+18 Jul 2016 16:09:26,189 ERROR TestSuitRunner  []: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+webdriver-staging
+1468838321435	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1468838321437	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838321438	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1468838321438	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1468838321439	addons.xpi	DEBUG	checkForChanges
+1468838321440	addons.xpi	DEBUG	Loaded add-on state from prefs: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous7936990496658407476webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838298907,"mt":1468838298067}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838321442	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1468838321443	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838321446	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1468838321446	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous7936990496658407476webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838298907,"mt":1468838298067}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838321449	addons.xpi	DEBUG	No changes found
+1468838321463	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1468838321463	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1468838321464	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1468838321464	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1468838321464	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1468838321465	addons.manager	DEBUG	Starting provider: GMPProvider
+1468838321476	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1468838321476	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1468838321477	addons.manager	DEBUG	Starting provider: PluginProvider
+1468838321477	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1468838321477	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1468838321478	addons.manager	DEBUG	Completed startup sequence
+1468838321636	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\SHRUTI~1\AppData\Local\Temp\anonymous7936990496658407476webdriver-profile\extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1468838321854	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1468838321854	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1468838321855	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1468838322035	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1468838322035	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1468838322037	addons.xpi-utils	DEBUG	Successfully read XPI database
+1468838322146	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1468838322146	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1468838322146	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript warning: https://normandy.cdn.mozilla.net/static/js/bundles/selfrepair-7575f6d27445b45bcffb.js, line 9825: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'NGL04449', ip: '10.222.115.33', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_31'
+Driver info: driver.version: FirefoxDriver
+Test case Login failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:31,076 FATAL TestSuitRunner  []: Unable to launch the browser
+org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+webdriver-staging
+1468838385685	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1468838385687	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838385687	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1468838385688	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1468838385688	addons.xpi	DEBUG	checkForChanges
+1468838385689	addons.xpi	DEBUG	Loaded add-on state from prefs: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous1327686991131882105webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838378088,"mt":1468838377613}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838385690	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1468838385691	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838385693	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1468838385693	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous1327686991131882105webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838378088,"mt":1468838377613}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838385696	addons.xpi	DEBUG	No changes found
+1468838385708	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1468838385709	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1468838385709	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1468838385709	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1468838385710	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1468838385710	addons.manager	DEBUG	Starting provider: GMPProvider
+1468838385719	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1468838385719	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1468838385719	addons.manager	DEBUG	Starting provider: PluginProvider
+1468838385720	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1468838385720	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1468838385721	addons.manager	DEBUG	Completed startup sequence
+1468838385850	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\SHRUTI~1\AppData\Local\Temp\anonymous1327686991131882105webdriver-profile\extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1468838386022	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1468838386022	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1468838386023	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1468838386181	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1468838386181	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1468838386182	addons.xpi-utils	DEBUG	Successfully read XPI database
+1468838386294	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1468838386294	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1468838386294	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript warning: https://normandy.cdn.mozilla.net/static/js/bundles/selfrepair-7575f6d27445b45bcffb.js, line 9825: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'NGL04449', ip: '10.222.115.33', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_31'
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:130)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:114)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:191)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:186)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:182)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:99)
+	at keywordLibrary.actions(keywordLibrary.java:1207)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:299)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+webdriver-staging
+1468838385685	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1468838385687	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838385687	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1468838385688	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1468838385688	addons.xpi	DEBUG	checkForChanges
+1468838385689	addons.xpi	DEBUG	Loaded add-on state from prefs: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous1327686991131882105webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838378088,"mt":1468838377613}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838385690	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1468838385691	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838385693	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1468838385693	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous1327686991131882105webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838378088,"mt":1468838377613}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838385696	addons.xpi	DEBUG	No changes found
+1468838385708	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1468838385709	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1468838385709	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1468838385709	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1468838385710	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1468838385710	addons.manager	DEBUG	Starting provider: GMPProvider
+1468838385719	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1468838385719	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1468838385719	addons.manager	DEBUG	Starting provider: PluginProvider
+1468838385720	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1468838385720	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1468838385721	addons.manager	DEBUG	Completed startup sequence
+1468838385850	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\SHRUTI~1\AppData\Local\Temp\anonymous1327686991131882105webdriver-profile\extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1468838386022	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1468838386022	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1468838386023	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1468838386181	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1468838386181	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1468838386182	addons.xpi-utils	DEBUG	Successfully read XPI database
+1468838386294	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1468838386294	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1468838386294	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript warning: https://normandy.cdn.mozilla.net/static/js/bundles/selfrepair-7575f6d27445b45bcffb.js, line 9825: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:118)
+	... 10 more
+18 Jul 2016 16:10:31,323 ERROR TestSuitRunner  []: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+webdriver-staging
+1468838385685	addons.xpi	INFO	SystemAddonInstallLocation directory is missing
+1468838385687	addons.xpi	INFO	Mapping {972ce4c6-7e08-4474-a285-3208198ce6fd} to C:\Program Files (x86)\Mozilla Firefox\browser\extensions\{972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838385687	addons.xpi	DEBUG	Skipping unavailable install location app-system-share
+1468838385688	addons.xpi	DEBUG	Skipping unavailable install location app-system-local
+1468838385688	addons.xpi	DEBUG	checkForChanges
+1468838385689	addons.xpi	DEBUG	Loaded add-on state from prefs: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous1327686991131882105webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838378088,"mt":1468838377613}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838385690	addons.xpi	DEBUG	Existing add-on fxdriver@googlecode.com in app-profile
+1468838385691	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1468838385693	addons.xpi	DEBUG	Existing add-on {972ce4c6-7e08-4474-a285-3208198ce6fd} in app-global
+1468838385693	addons.xpi	DEBUG	getInstallState changed: false, state: {"app-profile":{"fxdriver@googlecode.com":{"d":"C:\\Users\\SHRUTI~1\\AppData\\Local\\Temp\\anonymous1327686991131882105webdriver-profile\\extensions\\fxdriver@googlecode.com","e":false,"v":"2.41.0","st":1468838378088,"mt":1468838377613}},"app-global":{"{972ce4c6-7e08-4474-a285-3208198ce6fd}":{"d":"C:\\Program Files (x86)\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}","e":true,"v":"43.0.2","st":1466427113951,"mt":1450741746000}}}
+1468838385696	addons.xpi	DEBUG	No changes found
+1468838385708	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1468838385709	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1468838385709	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1468838385709	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1468838385710	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1468838385710	addons.manager	DEBUG	Starting provider: GMPProvider
+1468838385719	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1468838385719	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1468838385719	addons.manager	DEBUG	Starting provider: PluginProvider
+1468838385720	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1468838385720	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1468838385721	addons.manager	DEBUG	Completed startup sequence
+1468838385850	addons.xpi-utils	DEBUG	Starting async load of XPI database C:\Users\SHRUTI~1\AppData\Local\Temp\anonymous1327686991131882105webdriver-profile\extensions.json
+*** Blocklist::_loadBlocklistFromFile: blocklist is disabled
+1468838386022	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1468838386022	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1468838386023	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1468838386181	addons.xpi-utils	DEBUG	Async JSON file read took 0 MS
+1468838386181	addons.xpi-utils	DEBUG	Finished async read of XPI database, parsing...
+1468838386182	addons.xpi-utils	DEBUG	Successfully read XPI database
+1468838386294	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1468838386294	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1468838386294	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+JavaScript warning: https://normandy.cdn.mozilla.net/static/js/bundles/selfrepair-7575f6d27445b45bcffb.js, line 9825: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'NGL04449', ip: '10.222.115.33', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_31'
+Driver info: driver.version: FirefoxDriver
+Test case TC001 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:32,159 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC002 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:32,164 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC002|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:32,344 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC002 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:33,141 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC003 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:33,159 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC003|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:33,372 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC003 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:34,217 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC004 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:34,223 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC004|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:34,438 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC004 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:35,348 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC005 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:35,365 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC005|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:35,631 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC005 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:36,609 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC006 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:299)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:52,438 ERROR TestSuitRunner  []: Unable to create geo-fence|TC ID:- TC006|TS ID:- 1
+java.sql.SQLRecoverableException: IO Error: The Network Adapter could not establish the connection
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:548)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:564)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:251)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:29)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:563)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at keywordLibrary.actions(keywordLibrary.java:388)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:299)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:436)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:451)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:897)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:271)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1663)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:385)
+	... 10 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:146)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:130)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:402)
+	... 15 more
+18 Jul 2016 16:10:52,702 ERROR TestSuitRunner  []: Unable to create geo-fence
+Test case TC006 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:53,755 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC007 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:53,760 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC007|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:54,014 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC007 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:55,093 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC008 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:55,099 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC008|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:55,365 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC008 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:56,528 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC009 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:56,533 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC009|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:56,819 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC009 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:58,009 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC010 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:58,017 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC010|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:58,317 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC010 failed at step TS001. Aborting test case...
+18 Jul 2016 16:10:59,578 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC011 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:59,584 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC011|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:10:59,897 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC011 failed at step TS001. Aborting test case...
+18 Jul 2016 16:11:01,285 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC012 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:11:01,290 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC012|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:11:01,626 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC012 failed at step TS001. Aborting test case...
+18 Jul 2016 16:11:03,013 ERROR TestSuitRunner  []: Initial object not found TC ID:- TC013 TS ID:- 1
+java.lang.NullPointerException
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+	at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:66)
+	at org.openqa.selenium.support.ui.WebDriverWait.<init>(WebDriverWait.java:40)
+	at ElementLocator.waitElementExists(ElementLocator.java:94)
+	at keywordLibrary.actions(keywordLibrary.java:102)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:11:03,019 ERROR TestSuitRunner  []: Unable to refresh browser|TC ID:- TC013|TS ID:- 1
+java.lang.NullPointerException
+	at keywordLibrary.actions(keywordLibrary.java:1651)
+	at TestSuitRunner.executeTcStep(TestSuitRunner.java:360)
+	at TestSuitRunner.runSuit(TestSuitRunner.java:294)
+	at TestSuitRunner.run(TestSuitRunner.java:99)
+18 Jul 2016 16:11:03,363 ERROR TestSuitRunner  []: Unable to refresh browser
+Test case TC013 failed at step TS001. Aborting test case...
+18 Jul 2016 16:11:20,329 ERROR TestSuitRunner  []: Mail|sendMail|Unable to send mail.
+javax.mail.AuthenticationFailedException: 534-5.7.14 <https://accounts.google.com/signin/continue?sarp=1&scc=1&plt=AKgnsbtF
+534-5.7.14 OPkfqhSGmDX2-Ugo7WmTJahz8E2y5NMbh42mcE7ORNDfAVAdRW0Wp30pjJqJ6UmAZo2wjj
+534-5.7.14 HjV24XhsHd-Sg3hrnNQbdd-ibLwbebmoInAZTUbsA-9r-T18PyJswqEYh0r3H_dmkc44I0
+534-5.7.14 IOGDRmv1p82IQEBF5rr1KVXuUNAiT0IyPM3YiH_lbaiMB8oChwD7wHJ7OyZsoHd6YlmnpX
+534-5.7.14 _0sDLps_eq7fpMVT5_Fg56jdV7OWU> Please log in via your web browser and
+534-5.7.14 then try again.
+534-5.7.14  Learn more at
+534 5.7.14  https://support.google.com/mail/answer/78754 tt1sm3536631pac.35 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:823)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:756)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:673)
+	at javax.mail.Service.connect(Service.java:317)
+	at javax.mail.Service.connect(Service.java:176)
+	at javax.mail.Service.connect(Service.java:125)
+	at javax.mail.Transport.send0(Transport.java:194)
+	at javax.mail.Transport.send(Transport.java:124)
+	at Mail.sendMail(Mail.java:90)
+	at mailResults.sendMail(mailResults.java:21)
+	at TestSuitRunner.run(TestSuitRunner.java:136)

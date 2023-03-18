@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Test Sheet', 'Total', 'Pass', 'Fail', 'Pass Percentage'],
+         ['TestSuite',  TotTlink,      PassTlink,         FailTlink,             PassPerTlink],
+         //['End',  0,      0,        0,             0]
+         ]);
+
+    var options = {
+      title : 'Testlink Report by TestSuite',
+      vAxis: {title: 'Count'},
+      hAxis: {title: 'Suite'},
+      seriesType: 'bars',
+      series: {3: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+    </script>
+  </head>
+      <div id="chart_div" style="width: 900px; height: 500px;"></div>
+	 <table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
+			<tbody>
+				<tr>
+					<td style="width: 50%; text-align: center;background-color:#98AFC7;">
+						<strong>Test Suite Execution</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>TotalTestlinkTC</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>PassTestlinkTC</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>FailTestlinkTC</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong>PassPercentage</strong></td>
+					<td style="width: 10%; text-align: center;background-color:#98AFC7;">
+						<strong></strong></td>	
+					</tr>
+			</tbody>
+		</table> 
+  
